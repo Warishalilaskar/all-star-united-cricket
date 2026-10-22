@@ -10,6 +10,397 @@
     <link href="./src/output.css" rel="stylesheet" />
   </head>
 
+
+    
+ 
+<style>
+/* ==========================================
+   AS UNITED CRICKET - PROFILE & FINANCE CSS
+========================================== */
+
+/* ========== PLAYER PROFILE ========== */
+
+#profileModal .profile-box:not(.management-compact) {
+  box-sizing: border-box;
+  width: min(92vw, 520px);
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 28px 24px;
+  border: 1px solid rgba(250, 204, 21, 0.75);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #111827, #172033);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Player Photo */
+#profileModal .profile-box:not(.management-compact) #profileImage {
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 16px;
+  border: 4px solid #facc15;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px rgba(250, 204, 21, 0.12);
+}
+
+/* Player Name */
+#profileModal .profile-box:not(.management-compact) #profileName {
+  margin: 12px 0 8px;
+  color: #facc15 !important;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.18);
+  overflow-wrap: anywhere;
+}
+
+/* Player Role */
+#profileModal .profile-box:not(.management-compact) #profileRole {
+  margin: 0 0 18px;
+  color: #38bdf8 !important;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+/* Player Statistics */
+#profileModal .profile-box:not(.management-compact) #playerStats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 14px;
+  background: #172554 !important;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.8;
+  text-align: left;
+}
+
+#profileModal .profile-box:not(.management-compact) #playerNumber,
+#profileModal .profile-box:not(.management-compact) #profileNumber {
+  color: #34d399 !important;
+}
+
+#profileModal .profile-box:not(.management-compact) #profileBatting {
+  color: #fb923c !important;
+}
+
+#profileModal .profile-box:not(.management-compact) #profileBowling {
+  color: #f472b6 !important;
+}
+
+/* Player About */
+#profileModal .profile-box:not(.management-compact) #profileAbout {
+  margin-top: 16px;
+  color: #c4b5fd !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* ========== MANAGEMENT PROFILE ========== */
+
+#profileModal .profile-box.management-compact {
+  box-sizing: border-box;
+  width: min(92vw, 520px);
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px 22px;
+  border: 1px solid rgba(250, 204, 21, 0.75);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #111827, #172033);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Management Photo */
+#profileModal .profile-box.management-compact #profileImage {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 12px;
+  border: 3px solid #facc15;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px rgba(250, 204, 21, 0.12);
+}
+
+/* Management Name */
+#profileModal .profile-box.management-compact #profileName {
+  margin: 10px 0 6px;
+  color: #facc15 !important;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Management Role */
+#profileModal .profile-box.management-compact #profileRole {
+  margin: 0 0 12px;
+  color: #94a3b8 !important;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* Management About */
+#profileModal .profile-box.management-compact #profileAbout {
+  margin-top: 12px;
+  color: #e2e8f0 !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Hide player statistics on management profiles */
+#profileModal .profile-box.management-compact #playerStats {
+  display: none;
+}
+
+/* ========== PROFILE CLOSE BUTTON ========== */
+
+#profileModal #closeProfile {
+  color: #ffffff;
+  transition: color 0.2s, transform 0.2s;
+}
+
+#profileModal #closeProfile:hover {
+  color: #facc15;
+  transform: scale(1.12);
+}
+
+/* ========== MOBILE PROFILE SPACING ========== */
+
+@media (max-width: 480px) {
+  #profileModal .profile-box:not(.management-compact),
+  #profileModal .profile-box.management-compact {
+    width: 92vw;
+    max-height: 85vh;
+    padding: 22px 16px;
+  }
+
+  #profileModal .profile-box:not(.management-compact) #profileImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  #profileModal .profile-box:not(.management-compact) #profileName {
+    font-size: 21px;
+  }
+
+  #profileModal .profile-box:not(.management-compact) #profileRole {
+    font-size: 15px;
+  }
+
+  #profileModal .profile-box:not(.management-compact) #playerStats {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  #profileModal .profile-box.management-compact #profileImage {
+    width: 90px;
+    height: 90px;
+  }
+
+  #profileModal .profile-box.management-compact #profileName {
+    font-size: 20px;
+  }
+}
+
+/* ========== MANAGEMENT LOGIN ========== */
+
+#clubLoginBox {
+  margin: 18px 0 24px;
+  padding: 22px 18px;
+  border: 1px solid rgba(250, 204, 21, 0.65);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #111827, #172033);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#clubLoginBox h4,
+#clubLoginBox label {
+  color: #facc15;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+#clubLoginBox h4 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#clubLoginBox input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px 14px;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#clubLoginBox input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.15);
+}
+
+/* Login Button */
+#clubEmailLogin {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #facc15;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 800;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#clubEmailLogin:hover {
+  background: #fde047;
+  transform: translateY(-1px);
+}
+
+/* Register and Logout */
+#clubEmailRegister,
+#clubEmailLogout {
+  margin-top: 12px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+#clubEmailRegister {
+  color: #67e8f9;
+}
+
+#clubEmailRegister:hover {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+#clubEmailLogout {
+  color: #fda4af;
+}
+
+#clubEmailLogout:hover {
+  background: rgba(244, 63, 94, 0.12);
+}
+
+/* ========== FINANCE FORM ========== */
+
+#clubFinanceForm {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0 24px;
+  padding: 20px 16px;
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  border-radius: 16px;
+  background: #111827;
+}
+
+#clubFinanceForm label {
+  display: block;
+  margin-bottom: 7px;
+  color: #facc15;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+#clubFinanceForm input,
+#clubFinanceForm select,
+#clubFinanceForm textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  background-color: #0f172a;
+  color: #ffffff;
+  outline: none;
+}
+
+#clubFinanceForm input:focus,
+#clubFinanceForm select:focus,
+#clubFinanceForm textarea:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.12);
+}
+
+/* Transaction Type */
+#clubTransactionType {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid #facc15;
+  border-radius: 10px;
+  background-color: #111827;
+  color: #facc15;
+  font-weight: 700;
+}
+
+/* Finance Submit */
+#clubFinanceForm button[type="submit"] {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#clubFinanceForm button[type="submit"]:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+/* Messages */
+#clubLoginMessage,
+#clubFinanceMessage {
+  margin-top: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* ========== MOBILE LOGIN & FINANCE ========== */
+
+@media (max-width: 480px) {
+  #clubLoginBox {
+    padding: 18px 14px;
+  }
+
+  #clubFinanceForm {
+    padding: 16px 12px;
+  }
+}
+</style>
+
+
   <body class="m-0 bg-gray-950 font-sans text-white">
     <!-- ================= NAVBAR ================= -->
     <nav class="fixed top-0 left-0 z-50 w-full border-b border-yellow-400/40 bg-gray-950/95 shadow-lg shadow-yellow-400/5 backdrop-blur-xl">
@@ -111,14 +502,14 @@
     <section id="heroBanner" class="relative min-h-[500px] overflow-hidden bg-gray-950 sm:min-h-[600px]">
       <!-- Slide 1 -->
       <div class="hero-slide absolute inset-0 opacity-100">
-        <img src="/IMAGE/bannar 1.png" alt="AS United Cricket Banner 1" class="h-full w-full object-cover" />
+        <img src="/IMAGE/1st bannar image.jpg" alt="AS United Cricket Banner 1" class="h-full w-full object-cover" />
 
         <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20"></div>
       </div>
 
       <!-- Slide 2 -->
       <div class="hero-slide absolute inset-0 opacity-0">
-        <img src="/IMAGE/bannar image 2.png" alt="AS United Cricket Banner 2" class="h-full w-full object-cover" />
+        <img src="/IMAGE/1st bannar image.jpg" alt="AS United Cricket Banner 2" class="h-full w-full object-cover" />
 
         <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20"></div>
       </div>
@@ -245,479 +636,422 @@
     </section>
 
     <!-- PLAYER PROFILE MODAL -->
-    <div id="profileModal" class="profile-modal fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 p-4">
-      <div class="profile-box w-full max-w-md rounded-2xl border border-yellow-400/40 bg-gray-900 p-6 text-center text-white">
+
+    <div id="profileModal" class="profile-modal fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto bg-black/80 p-4">
+      <div class="profile-box my-auto w-full max-w-md rounded-2xl border border-yellow-400/40 bg-gray-900 p-6 text-center text-white">
         <button id="closeProfile" class="float-right text-3xl text-white hover:text-yellow-400" type="button">&times;</button>
 
-        <img id="profileImage" src="" alt="Player" class="mx-auto mb-4 h-32 w-32 rounded-full border-4 border-yellow-400 object-cover" />
+        <img id="profileImage" src="" alt="Profile" class="mx-auto mb-4 h-32 w-32 rounded-full border-4 border-yellow-400 object-cover" />
 
         <h3 id="profileName" class="text-2xl font-bold text-yellow-400"></h3>
         <p id="profileRole" class="mb-4 text-gray-400"></p>
-        <p id="profileNumber" class="mb-2"></p>
-        <p id="profileBatting" class="mb-2"></p>
-        <p id="profileBowling" class="mb-2"></p>
+
+        <!-- Players' Cricket Stats -->
+        <div id="playerStats">
+          <p id="profileNumber" class="mb-2"></p>
+          <p id="profileBatting" class="mb-2"></p>
+          <p id="profileBowling" class="mb-2"></p>
+        </div>
+
+        <!-- Management's Club Finance -->
+        <div id="managementFinance" class="mt-5 hidden text-left">
+          <h4 class="mb-4 text-center text-xl font-bold text-yellow-400">CLUB FUND</h4>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div class="rounded-lg bg-gray-800 p-3">
+              <p class="text-xs text-gray-400">Total Income</p>
+              <p id="clubIncome" class="mt-1 font-bold text-green-400">₹0</p>
+            </div>
+
+            <div class="rounded-lg bg-gray-800 p-3">
+              <p class="text-xs text-gray-400">Total Expense</p>
+              <p id="clubExpense" class="mt-1 font-bold text-red-400">₹0</p>
+            </div>
+
+            <div class="rounded-lg bg-gray-800 p-3">
+              <p class="text-xs text-gray-400">Balance</p>
+              <p id="clubBalance" class="mt-1 font-bold text-yellow-400">₹0</p>
+            </div>
+          </div>
+          <!-- Club Member Phone Login -->
+
+          <div id="clubLoginBox" class="mt-5 rounded-xl border border-yellow-400 bg-slate-900 p-5">
+            <h3 class="mb-3 text-xl font-bold text-yellow-400">MANAGEMENT MEMBER LOGIN</h3>
+
+            <label for="clubEmail" class="mb-1 block text-md font-bold text-yellow-400"> EMAIL ADDRESS </label>
+
+            <input id="clubEmail" type="email" placeholder="Enter your email" autocomplete="off" required class="mb-3 w-full rounded-lg border border-gray-700 bg-gray-800 p-3 text-white" />
+
+            <label for="clubPassword" class="mb-1 block text-md font-bold text-yellow-400"> PASSWORD </label>
+
+            <!-- Password Box with Eye Icon -->
+
+            <div class="relative mb-3 w-full">
+              <input id="clubPassword" type="password" placeholder="Enter password" autocomplete="off" required minlength="6" style="width: 100%; box-sizing: border-box; padding: 12px 44px 12px 12px" class="rounded-lg border border-gray-700 bg-gray-800 text-white" />
+
+              <button type="button" id="toggleClubPassword" aria-label="Show password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; background: transparent; border: 0; padding: 4px; cursor: pointer; color: #9ca3af">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+
+            <button id="clubEmailLogin" type="button" class="mb-3 w-full rounded-lg text-2xl bg-yellow-400 p-3 font-bold text-gray-950">Login</button>
+
+            <button id="clubEmailRegister" type="button" class="w-full rounded-lg bg-emerald-500 p-3 font-bold text-white">Create Account</button>
+
+            <button id="clubEmailLogout" type="button" class="mt-3 hidden w-full rounded-lg bg-red-600 p-3 font-bold text-white">Logout</button>
+
+            <p id="clubLoginMessage" role="status" aria-live="polite" class="mt-3 text-sm text-gray-300"></p>
+          </div>
+
+          <form id="clubFinanceForm" class="mt-5 space-y-3">
+            <div>
+              <label for="clubTransactionType" class="mb-1 block text-md text-gray-300">Transaction Type</label>
+
+              <select id="clubTransactionType" required class="w-full rounded-lg border-2 border-yellow-400 bg-slate-800 p-3 font-bold text-white focus:border-yellow-300 focus:ring-2 focus:ring-yellow-400">
+                <option value="income" class="bg-emerald-900 font-bold text-white">Income - টাকা জমা</option>
+                <option value="expense" class="bg-rose-900 font-bold text-white">Expense - টাকা খরচ</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="clubDescription" class="mb-1 block text-md text-gray-300">Description</label>
+
+              <input id="clubDescription" type="text" required maxlength="100" placeholder="যেমন: সদস্যদের চাঁদা" class="w-full rounded-lg border border-gray-700 bg-gray-800 p-3 text-white" />
+            </div>
+
+            <div>
+              <label for="clubAmount" class="mb-1 block text-md text-gray-300">Amount (₹)</label>
+
+              <input id="clubAmount" type="number" min="0.01" max="100000000" step="0.01" required placeholder="টাকার পরিমাণ" class="w-full rounded-lg border border-gray-700 bg-gray-800 p-3 text-white" />
+            </div>
+
+            <button type="submit" class="w-full rounded-lg bg-yellow-400 p-3 font-bold text-gray-950 hover:bg-yellow-300">Save Club Transaction</button>
+
+            <p id="clubFinanceMessage" role="status" aria-live="polite" class="text-sm text-gray-300"></p>
+          </form>
+
+          <h4 class="mb-3 mt-6 font-bold text-white">Transaction History</h4>
+          <div id="clubTransactionList" class="space-y-3"></div>
+        </div>
+
         <p id="profileAbout" class="mt-4 text-sm text-gray-300"></p>
       </div>
     </div>
 
     <!-- ================= CONTACT SECTION ================= -->
 
-<section id="contact" class="relative w-full overflow-hidden bg-gray-950 px-4 py-16 text-white sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+    <section id="contact" class="relative w-full overflow-hidden bg-gray-950 px-4 py-16 text-white sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+      <!-- Background Glow -->
+      <div class="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-yellow-400/10 blur-[100px]"></div>
+      <div class="pointer-events-none absolute -bottom-20 right-0 h-72 w-72 rounded-full bg-yellow-500/10 blur-[100px]"></div>
 
-  <!-- Background Glow -->
-  <div class="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-yellow-400/10 blur-[100px]"></div>
-  <div class="pointer-events-none absolute -bottom-20 right-0 h-72 w-72 rounded-full bg-yellow-500/10 blur-[100px]"></div>
-
-  <!-- Container -->
-  <div class="relative mx-auto w-full">
-
-    <!-- Section Heading -->
-    <div class="contact-heading mb-10 sm:mb-12">
-
-      <p class="mb-3 flex items-center gap-3 text-sm font-black uppercase tracking-[0.25em] text-yellow-400 sm:text-base sm:tracking-[0.3em]">
-        <span class="h-1 w-10 shrink-0 rounded-full bg-yellow-400"></span>
-        AS UNITED CRICKET TEAM
-      </p>
-
-      <h2 class="text-3xl font-black uppercase leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-        Contact <span class="text-yellow-400">Our Team</span>
-      </h2>
-
-      <p class="mt-4 max-w-2xl text-sm font-semibold leading-7 text-gray-300 sm:text-base lg:text-lg">
-        Want to connect with All Star United Cricket Team? Send us a message for match enquiries,
-        friendly matches, tournaments or other team-related information.
-      </p>
-
-      <div class="mt-6 h-1 w-24 rounded-full bg-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.5)]"></div>
-    </div>
-
-    <!-- Contact Layout -->
-    <div class="grid grid-cols-1 items-start gap-7 lg:grid-cols-5 lg:gap-8 xl:gap-10">
-
-      <!-- Left Information -->
-      <div class="contact-info min-w-0 lg:col-span-2">
-
-        <!-- Team Information Card -->
-        <div class="mb-6 rounded-2xl border border-yellow-400/25 bg-gray-900/80 p-5 transition duration-300 hover:-translate-y-1 hover:border-yellow-400/60 hover:shadow-xl hover:shadow-yellow-400/5 sm:p-6">
-
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400/10 text-yellow-400">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Z"></path>
-              <circle cx="12" cy="10" r="2.5"></circle>
-            </svg>
-          </div>
-
-          <h3 class="mb-2 text-xl font-black text-white sm:text-2xl">
-            Our Cricket Team
-          </h3>
-
-          <p class="font-bold leading-7 text-gray-200">
-            All Star United Cricket Team
+      <!-- Container -->
+      <div class="relative mx-auto w-full">
+        <!-- Section Heading -->
+        <div class="contact-heading mb-10 sm:mb-12">
+          <p class="mb-3 flex items-center gap-3 text-sm font-black uppercase tracking-[0.25em] text-yellow-400 sm:text-base sm:tracking-[0.3em]">
+            <span class="h-1 w-10 shrink-0 rounded-full bg-yellow-400"></span>
+            AS UNITED CRICKET TEAM
           </p>
 
-          <p class="mt-2 text-sm font-medium leading-6 text-gray-400">
-            Contact us for team enquiries and cricket-related discussions.
-          </p>
+          <h2 class="text-3xl font-black uppercase leading-tight tracking-tight sm:text-4xl lg:text-5xl">Contact <span class="text-yellow-400">Our Team</span></h2>
+
+          <p class="mt-4 max-w-2xl text-sm font-semibold leading-7 text-gray-300 sm:text-base lg:text-lg">Want to connect with All Star United Cricket Team? Send us a message for match enquiries, friendly matches, tournaments or other team-related information.</p>
+
+          <div class="mt-6 h-1 w-24 rounded-full bg-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.5)]"></div>
         </div>
 
-        <!-- Connect Card -->
-        <div class="rounded-2xl border border-gray-800 bg-gray-900/80 p-5 sm:p-6">
+        <!-- Contact Layout -->
+        <div class="grid grid-cols-1 items-start gap-7 lg:grid-cols-5 lg:gap-8 xl:gap-10">
+          <!-- Left Information -->
+          <div class="contact-info min-w-0 lg:col-span-2">
+            <!-- Team Information Card -->
+            <div class="mb-6 rounded-2xl border border-yellow-400/25 bg-gray-900/80 p-5 transition duration-300 hover:-translate-y-1 hover:border-yellow-400/60 hover:shadow-xl hover:shadow-yellow-400/5 sm:p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400/10 text-yellow-400">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Z"></path>
+                  <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+              </div>
 
-          <h3 class="mb-4 text-lg font-black text-yellow-400 sm:text-xl">
-            Let's Connect
-          </h3>
+              <h3 class="mb-2 text-xl font-black text-white sm:text-2xl">Our Cricket Team</h3>
 
-          <p class="text-sm font-semibold leading-7 text-gray-300 sm:text-base">
-            Have a question or want to arrange a cricket match? Fill out the contact form.
-            Our team can get back to you using the contact details you provide.
-          </p>
+              <p class="font-bold leading-7 text-gray-200">All Star United Cricket Team</p>
 
-          <div class="mt-6 flex items-center gap-3 rounded-xl border border-gray-800 bg-gray-950/70 p-4">
-
-            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-gray-950">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"></path>
-              </svg>
-            </span>
-
-            <div class="min-w-0">
-              <p class="font-extrabold text-white">Contact Form</p>
-              <p class="mt-1 text-sm font-medium leading-5 text-gray-400">
-                Send your message to our team
-              </p>
+              <p class="mt-2 text-sm font-medium leading-6 text-gray-400">Contact us for team enquiries and cricket-related discussions.</p>
             </div>
 
+            <!-- Connect Card -->
+            <div class="rounded-2xl border border-gray-800 bg-gray-900/80 p-5 sm:p-6">
+              <h3 class="mb-4 text-lg font-black text-yellow-400 sm:text-xl">Let's Connect</h3>
+
+              <p class="text-sm font-semibold leading-7 text-gray-300 sm:text-base">Have a question or want to arrange a cricket match? Fill out the contact form. Our team can get back to you using the contact details you provide.</p>
+
+              <div class="mt-6 flex items-center gap-3 rounded-xl border border-gray-800 bg-gray-950/70 p-4">
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-gray-950">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"></path>
+                  </svg>
+                </span>
+
+                <div class="min-w-0">
+                  <p class="font-extrabold text-white">Contact Form</p>
+                  <p class="mt-1 text-sm font-medium leading-5 text-gray-400">Send your message to our team</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Contact Form -->
+          <div class="contact-form-card min-w-0 rounded-2xl border border-yellow-400/25 bg-gray-900/90 p-5 shadow-2xl shadow-black/30 sm:p-7 lg:col-span-3 lg:p-8">
+            <div class="mb-7 border-b border-gray-800 pb-5">
+              <p class="mb-2 text-xs font-black uppercase tracking-[0.25em] text-yellow-400">Get In Touch</p>
+
+              <h3 class="text-2xl font-black tracking-tight text-white sm:text-3xl">Send Us a <span class="text-yellow-400">Message</span></h3>
+
+              <p class="mt-3 text-sm font-semibold leading-6 text-gray-300">Please enter your details and message below.</p>
+            </div>
+
+            <form id="contactForm" class="space-y-5">
+              <!-- Name + Email -->
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div class="min-w-0">
+                  <label for="contactName" class="mb-2 block text-sm font-extrabold text-gray-200"> Your Name <span class="text-yellow-400">*</span> </label>
+
+                  <input id="contactName" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20" />
+                </div>
+
+                <div class="min-w-0">
+                  <label for="contactEmail" class="mb-2 block text-sm font-extrabold text-gray-200"> Email Address <span class="text-yellow-400">*</span> </label>
+
+                  <input id="contactEmail" name="email" type="email" placeholder="Enter your email" autocomplete="off" required class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20" />
+                </div>
+              </div>
+
+              <!-- Phone + Enquiry -->
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div class="min-w-0">
+                  <label for="contactPhone" class="mb-2 block text-sm font-extrabold text-gray-200"> Phone Number </label>
+
+                  <input id="contactPhone" name="phone" type="number" inputmode="number" autocomplete="number" placeholder="Enter your phone number" class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20" />
+                </div>
+
+                <div class="min-w-0">
+                  <label for="contactSubject" class="mb-2 block text-sm font-extrabold text-gray-200"> Enquiry Type <span class="text-yellow-400">*</span> </label>
+
+                  <select id="contactSubject" name="subject" required class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-bold text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20">
+                    <option value="" disabled selected>Select enquiry</option>
+                    <option value="Friendly Match">Friendly Match</option>
+                    <option value="Tournament">Tournament</option>
+                    <option value="Match Invitation">Match Invitation</option>
+                    <option value="Team Collaboration">Team Collaboration</option>
+                    <option value="Other">Other Enquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="contactMessage" class="mb-2 block text-sm font-extrabold text-gray-200"> Your Message <span class="text-yellow-400">*</span> </label>
+
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Write your message to our team..." required class="w-full resize-y rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold leading-7 text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="group flex w-full items-center justify-center gap-3 rounded-xl bg-yellow-400 px-6 py-4 font-black text-gray-950 shadow-lg shadow-yellow-400/10 transition duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-[0_10px_30px_rgba(250,204,21,0.2)] sm:w-auto">
+                Send Message
+
+                <svg class="h-5 w-5 transition duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m22 2-7 20-4-9-9-4 20-7Z"></path>
+                </svg>
+              </button>
+
+              <p id="contactStatus" class="hidden rounded-lg p-3 text-sm font-semibold leading-6" role="status" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </div>
-
-      <!-- Right Contact Form -->
-      <div class="contact-form-card min-w-0 rounded-2xl border border-yellow-400/25 bg-gray-900/90 p-5 shadow-2xl shadow-black/30 sm:p-7 lg:col-span-3 lg:p-8">
-
-        <div class="mb-7 border-b border-gray-800 pb-5">
-          <p class="mb-2 text-xs font-black uppercase tracking-[0.25em] text-yellow-400">
-            Get In Touch
-          </p>
-
-          <h3 class="text-2xl font-black tracking-tight text-white sm:text-3xl">
-            Send Us a <span class="text-yellow-400">Message</span>
-          </h3>
-
-          <p class="mt-3 text-sm font-semibold leading-6 text-gray-300">
-            Please enter your details and message below.
-          </p>
-        </div>
-
-        <form id="contactForm" class="space-y-5">
-
-          <!-- Name + Email -->
-          <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
-
-            <div class="min-w-0">
-              <label for="contactName" class="mb-2 block text-sm font-extrabold text-gray-200">
-                Your Name <span class="text-yellow-400">*</span>
-              </label>
-
-              <input
-                id="contactName"
-                name="name"
-                type="text"
-                placeholder="Enter your full name"
-                autocomplete="name"
-                required
-                class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20"
-              />
-            </div>
-
-            <div class="min-w-0">
-              <label for="contactEmail" class="mb-2 block text-sm font-extrabold text-gray-200">
-                Email Address <span class="text-yellow-400">*</span>
-              </label>
-
-              <input
-                id="contactEmail"
-                name="email"
-                type="email"
-                placeholder="Enter your email"
-                autocomplete="email"
-                required
-                class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20"
-              />
-            </div>
-
-          </div>
-
-          <!-- Phone + Enquiry -->
-          <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
-
-            <div class="min-w-0">
-              <label for="contactPhone" class="mb-2 block text-sm font-extrabold text-gray-200">
-                Phone Number
-              </label>
-
-              <input
-                id="contactPhone"
-                name="phone"
-                type="number"
-                inputmode="number"
-                autocomplete="number"
-                placeholder="Enter your phone number"
-                class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20"
-              />
-            </div>
-
-            <div class="min-w-0">
-              <label for="contactSubject" class="mb-2 block text-sm font-extrabold text-gray-200">
-                Enquiry Type <span class="text-yellow-400">*</span>
-              </label>
-
-              <select
-                id="contactSubject"
-                name="subject"
-                required
-                class="w-full rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-bold text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20"
-              >
-                <option value="" disabled selected>Select enquiry</option>
-                <option value="Friendly Match">Friendly Match</option>
-                <option value="Tournament">Tournament</option>
-                <option value="Match Invitation">Match Invitation</option>
-                <option value="Team Collaboration">Team Collaboration</option>
-                <option value="Other">Other Enquiry</option>
-              </select>
-            </div>
-
-          </div>
-
-          <!-- Message -->
-          <div>
-            <label for="contactMessage" class="mb-2 block text-sm font-extrabold text-gray-200">
-              Your Message <span class="text-yellow-400">*</span>
-            </label>
-
-            <textarea
-              id="contactMessage"
-              name="message"
-              rows="5"
-              placeholder="Write your message to our team..."
-              required
-              class="w-full resize-y rounded-xl border border-gray-700 bg-gray-950 px-4 py-3.5 font-semibold leading-7 text-white outline-none transition placeholder:font-medium placeholder:text-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20"
-            ></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <button
-            type="submit"
-            class="group flex w-full items-center justify-center gap-3 rounded-xl bg-yellow-400 px-6 py-4 font-black text-gray-950 shadow-lg shadow-yellow-400/10 transition duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-[0_10px_30px_rgba(250,204,21,0.2)] sm:w-auto"
-          >
-            Send Message
-
-            <svg class="h-5 w-5 transition duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" d="m22 2-7 20-4-9-9-4 20-7Z"></path>
-            </svg>
-          </button>
-
-          <p id="contactStatus" class="hidden rounded-lg p-3 text-sm font-semibold leading-6" role="status" aria-live="polite"></p>
-
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- ================= END CONTACT SECTION ================= -->
 
-    
-<!-- ================= FULL WIDTH FOOTER ================= -->
+    <!-- ================= FULL WIDTH FOOTER ================= -->
 
-<!-- ================= PREMIUM CRICKET FOOTER ================= -->
-<footer id="footer" class="relative w-full overflow-hidden border-t-2 border-yellow-400 bg-gray-950 text-white">
+    <!-- ================= PREMIUM CRICKET FOOTER ================= -->
+    <footer id="footer" class="relative w-full overflow-hidden border-t-2 border-yellow-400 bg-gray-950 text-white">
+      <!-- Background Glow -->
+      <div class="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-yellow-400/10 blur-[100px]"></div>
+      <div class="pointer-events-none absolute -right-24 bottom-10 h-64 w-64 rounded-full bg-yellow-400/10 blur-[100px]"></div>
 
-  <!-- Background Glow -->
-  <div class="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-yellow-400/10 blur-[100px]"></div>
-  <div class="pointer-events-none absolute -right-24 bottom-10 h-64 w-64 rounded-full bg-yellow-400/10 blur-[100px]"></div>
+      <!-- Footer Main Container -->
+      <div class="relative w-full px-4 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
+        <!-- Footer Grid -->
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
+          <!-- COLUMN 1: TEAM BRAND -->
+          <div class="min-w-0">
+            <a href="#" class="group mb-6 inline-flex items-center gap-3">
+              <img src="./IMAGE/LOGO.png" alt="All Star United Cricket Logo" class="h-16 w-16 shrink-0 rounded-full object-contain transition duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]" />
 
-  <!-- Footer Main Container -->
-  <div class="relative w-full px-4 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
+              <span class="text-xl font-black uppercase leading-tight tracking-wide sm:text-2xl">
+                ALL STAR
+                <span class="block text-yellow-400">UNITED</span>
+                <span class="mt-1 block text-sm font-extrabold tracking-[0.35em] text-gray-400">CRICKET</span>
+              </span>
+            </a>
 
-    <!-- Footer Grid -->
-    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
+            <p class="text-base font-semibold leading-8 text-gray-300">All Star United Cricket Team — united by passion, driven by teamwork, and committed to the true spirit of cricket. Together we play, together we grow, together we win.</p>
 
-      <!-- COLUMN 1: TEAM BRAND -->
-      <div class="min-w-0">
+            <div class="mt-6 inline-flex items-center gap-3 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-4 py-3">
+              <span class="h-3 w-3 animate-pulse rounded-full bg-yellow-400"></span>
+              <span class="text-sm font-black tracking-wide text-yellow-400 sm:text-base"> ONE TEAM. ONE DREAM. </span>
+            </div>
+          </div>
 
-        <a href="#" class="group mb-6 inline-flex items-center gap-3">
-          <img
-            src="./IMAGE/LOGO.png"
-            alt="All Star United Cricket Logo"
-            class="h-16 w-16 shrink-0 rounded-full object-contain transition duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]"
-          />
+          <!-- COLUMN 2: QUICK LINKS -->
+          <div class="min-w-0">
+            <h3 class="mb-6 border-b-2 border-yellow-400/50 pb-4 text-xl font-black uppercase tracking-wide text-yellow-400 sm:text-2xl">Quick Links</h3>
 
-          <span class="text-xl font-black uppercase leading-tight tracking-wide sm:text-2xl">
-            ALL STAR
-            <span class="block text-yellow-400">UNITED</span>
-            <span class="mt-1 block text-sm font-extrabold tracking-[0.35em] text-gray-400">CRICKET</span>
-          </span>
-        </a>
+            <ul class="space-y-5 text-base font-bold text-gray-200 sm:text-lg">
+              <li>
+                <a href="#" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
+                  <span class="text-2xl font-black text-yellow-400">›</span>
+                  Home
+                </a>
+              </li>
 
-        <p class="text-base font-semibold leading-8 text-gray-300">
-          All Star United Cricket Team — united by passion, driven by teamwork,
-          and committed to the true spirit of cricket. Together we play,
-          together we grow, together we win.
-        </p>
+              <li>
+                <a href="#about" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
+                  <span class="text-2xl font-black text-yellow-400">›</span>
+                  About Our Team
+                </a>
+              </li>
 
-        <div class="mt-6 inline-flex items-center gap-3 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-4 py-3">
-          <span class="h-3 w-3 animate-pulse rounded-full bg-yellow-400"></span>
-          <span class="text-sm font-black tracking-wide text-yellow-400 sm:text-base">
-            ONE TEAM. ONE DREAM.
-          </span>
+              <li>
+                <a href="#players" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
+                  <span class="text-2xl font-black text-yellow-400">›</span>
+                  Our Players
+                </a>
+              </li>
+
+              <li>
+                <a href="#management" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
+                  <span class="text-2xl font-black text-yellow-400">›</span>
+                  Team Management
+                </a>
+              </li>
+
+              <li>
+                <a href="#contact" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
+                  <span class="text-2xl font-black text-yellow-400">›</span>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- COLUMN 3: SOCIAL MEDIA -->
+          <div class="min-w-0">
+            <h3 class="mb-6 border-b-2 border-yellow-400/50 pb-4 text-xl font-black uppercase tracking-wide text-yellow-400 sm:text-2xl">Follow Our Team</h3>
+
+            <p class="mb-6 text-base font-semibold leading-8 text-gray-300">Stay connected with our team for cricket updates, match highlights, tournament news and memorable moments.</p>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <!-- WhatsApp -->
+              <a href="https://chat.whatsapp.com/DExenYE8W9O9gxFvP1Adb2?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-green-500/50 bg-green-500/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-green-400 hover:bg-green-500/15 hover:shadow-lg hover:shadow-green-500/10">
+                <svg class="h-6 w-6 shrink-0 text-green-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.52 3.48A11.8 11.8 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.09.55 4.13 1.6 5.93L.1 24l6.34-1.66a11.9 11.9 0 0 0 5.64 1.43h.01c6.55 0 11.88-5.33 11.88-11.88a11.8 11.8 0 0 0-3.45-8.41ZM12.09 21.75a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.76.99 1-3.66-.23-.38a9.85 9.85 0 0 1-1.52-5.23c0-5.47 4.45-9.92 9.92-9.92a9.85 9.85 0 0 1 7.01 2.91 9.85 9.85 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.92 9.92Z"
+                  />
+                </svg>
+                <span class="text-sm font-extrabold sm:text-base">WhatsApp</span>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-pink-500/50 bg-pink-500/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-pink-400 hover:bg-pink-500/15 hover:shadow-lg hover:shadow-pink-500/10">
+                <svg class="h-6 w-6 shrink-0 text-pink-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="text-sm font-extrabold sm:text-base">Instagram</span>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/share/1MTD1ygqEh/" target="_blank" rel="noopener noreferrer" class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-blue-500/50 bg-blue-500/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-500/15 hover:shadow-lg hover:shadow-blue-500/10">
+                <svg class="h-6 w-6 shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.4v2H7v3.1h2.9v8h3.6Z" />
+                </svg>
+                <span class="text-sm font-extrabold sm:text-base">Facebook</span>
+              </a>
+
+              <!-- Twitter / X -->
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-gray-600 bg-white/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-white hover:bg-white/10">
+                <svg class="h-6 w-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.63L5.37 22H2.25l7.25-8.29L1.8 2h6.4l4.43 6.96L18.9 2Zm-1.1 17.87h1.73L7.27 4.02H5.41L17.8 19.87Z" />
+                </svg>
+                <span class="text-sm font-extrabold sm:text-base">Twitter / X</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: LOCATION -->
+          <div class="min-w-0">
+            <h3 class="mb-6 border-b-2 border-yellow-400/50 pb-4 text-xl font-black uppercase tracking-wide text-yellow-400 sm:text-2xl">Find Us</h3>
+
+            <p class="mb-5 text-base font-semibold leading-8 text-gray-300">Explore our team location on Google Maps.</p>
+
+            <div class="group overflow-hidden rounded-2xl border-2 border-yellow-400/40 bg-gray-900 p-1 transition duration-300 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-400/10">
+              <iframe
+                title="AS UNITED CRICKET TEAM Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5323292476487!2d88.36675612358262!3d22.295698729689825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02691bd95bc009%3A0xe2abde7f27764a79!2sShalika%20Bazar%2C%20Bagnar%2C%20Salika%2C%20West%20Bengal%20743355!5e0!3m2!1sen!2sin!4v1792095615062!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              >
+                class="block h-64 w-full rounded-xl" style="border: 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen ></iframe
+              >
+            </div>
+
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-3 text-base font-black text-yellow-400 transition duration-300 hover:gap-4 hover:text-yellow-300 sm:text-lg">
+              Open Google Maps
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10"></path>
+              </svg>
+            </a>
+          </div>
         </div>
 
-      </div>
+        <!-- Decorative Divider -->
+        <div class="my-12 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
 
-      <!-- COLUMN 2: QUICK LINKS -->
-      <div class="min-w-0">
+        <!-- Copyright Bar -->
+        <div class="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
+          <p class="text-sm font-bold leading-7 text-gray-300 sm:text-base">
+            © <span id="footerYear"></span>
+            <span class="font-black text-white">AS UNITED CRICKET TEAM.</span>
+            All Rights Reserved.
+          </p>
 
-        <h3 class="mb-6 border-b-2 border-yellow-400/50 pb-4 text-xl font-black uppercase tracking-wide text-yellow-400 sm:text-2xl">
-          Quick Links
-        </h3>
-
-        <ul class="space-y-5 text-base font-bold text-gray-200 sm:text-lg">
-
-          <li>
-            <a href="#" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
-              <span class="text-2xl font-black text-yellow-400">›</span>
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
-              <span class="text-2xl font-black text-yellow-400">›</span>
-              About Our Team
-            </a>
-          </li>
-
-          <li>
-            <a href="#players" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
-              <span class="text-2xl font-black text-yellow-400">›</span>
-              Our Players
-            </a>
-          </li>
-
-          <li>
-            <a href="#management" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
-              <span class="text-2xl font-black text-yellow-400">›</span>
-              Team Management
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact" class="group inline-flex items-center gap-3 transition duration-300 hover:translate-x-1 hover:text-yellow-400">
-              <span class="text-2xl font-black text-yellow-400">›</span>
-              Contact Us
-            </a>
-          </li>
-
-        </ul>
-      </div>
-
-      <!-- COLUMN 3: SOCIAL MEDIA -->
-      <div class="min-w-0">
-
-        <h3 class="mb-6 border-b-2 border-yellow-400/50 pb-4 text-xl font-black uppercase tracking-wide text-yellow-400 sm:text-2xl">
-          Follow Our Team
-        </h3>
-
-        <p class="mb-6 text-base font-semibold leading-8 text-gray-300">
-          Stay connected with our team for cricket updates, match highlights,
-          tournament news and memorable moments.
-        </p>
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-
-          <!-- WhatsApp -->
-          <a
-            href="https://chat.whatsapp.com/DExenYE8W9O9gxFvP1Adb2?s=cl&p=a&mlu=4&ilr=4"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-green-500/50 bg-green-500/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-green-400 hover:bg-green-500/15 hover:shadow-lg hover:shadow-green-500/10"
-          >
-            <svg class="h-6 w-6 shrink-0 text-green-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.52 3.48A11.8 11.8 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.09.55 4.13 1.6 5.93L.1 24l6.34-1.66a11.9 11.9 0 0 0 5.64 1.43h.01c6.55 0 11.88-5.33 11.88-11.88a11.8 11.8 0 0 0-3.45-8.41ZM12.09 21.75a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.76.99 1-3.66-.23-.38a9.85 9.85 0 0 1-1.52-5.23c0-5.47 4.45-9.92 9.92-9.92a9.85 9.85 0 0 1 7.01 2.91 9.85 9.85 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.92 9.92Z"/>
-            </svg>
-            <span class="text-sm font-extrabold sm:text-base">WhatsApp</span>
-          </a>
-
-          <!-- Instagram -->
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-pink-500/50 bg-pink-500/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-pink-400 hover:bg-pink-500/15 hover:shadow-lg hover:shadow-pink-500/10"
-          >
-            <svg class="h-6 w-6 shrink-0 text-pink-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
-            </svg>
-            <span class="text-sm font-extrabold sm:text-base">Instagram</span>
-          </a>
-
-          <!-- Facebook -->
-          <a
-            href="https://www.facebook.com/share/1MTD1ygqEh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-blue-500/50 bg-blue-500/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-500/15 hover:shadow-lg hover:shadow-blue-500/10"
-          >
-            <svg class="h-6 w-6 shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.4v2H7v3.1h2.9v8h3.6Z"/>
-            </svg>
-            <span class="text-sm font-extrabold sm:text-base">Facebook</span>
-          </a>
-
-          <!-- Twitter / X -->
-          <a
-            href="https://x.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex min-w-0 items-center justify-center gap-3 rounded-xl border border-gray-600 bg-white/5 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-white hover:bg-white/10"
-          >
-            <svg class="h-6 w-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.63L5.37 22H2.25l7.25-8.29L1.8 2h6.4l4.43 6.96L18.9 2Zm-1.1 17.87h1.73L7.27 4.02H5.41L17.8 19.87Z"/>
-            </svg>
-            <span class="text-sm font-extrabold sm:text-base">Twitter / X</span>
-          </a>
-
+          <a href="#" class="text-sm font-extrabold text-gray-300 transition duration-300 hover:text-yellow-400 sm:text-base"> Made with <span class="text-lg text-yellow-400">♥</span> for Cricket </a>
         </div>
       </div>
+    </footer>
+    <!-- ================= END PREMIUM FOOTER ================= -->
 
-      <!-- COLUMN 4: LOCATION -->
-      <div class="min-w-0">
-
-        <h3 class="mb-6 border-b-2 border-yellow-400/50 pb-4 text-xl font-black uppercase tracking-wide text-yellow-400 sm:text-2xl">
-          Find Us
-        </h3>
-
-        <p class="mb-5 text-base font-semibold leading-8 text-gray-300">
-          Explore our team location on Google Maps.
-        </p>
-
-        <div class="group overflow-hidden rounded-2xl border-2 border-yellow-400/40 bg-gray-900 p-1 transition duration-300 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-400/10">
-          <iframe
-            title="AS UNITED CRICKET TEAM Location Map"
-           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5323292476487!2d88.36675612358262!3d22.295698729689825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02691bd95bc009%3A0xe2abde7f27764a79!2sShalika%20Bazar%2C%20Bagnar%2C%20Salika%2C%20West%20Bengal%20743355!5e0!3m2!1sen!2sin!4v1792095615062!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
-            class="block h-64 w-full rounded-xl"
-            style="border: 0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <a
-          href="https://www.google.com/maps"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-5 inline-flex items-center gap-3 text-base font-black text-yellow-400 transition duration-300 hover:gap-4 hover:text-yellow-300 sm:text-lg"
-        >
-          Open Google Maps
-          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10"></path>
-          </svg>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- Decorative Divider -->
-    <div class="my-12 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-
-    <!-- Copyright Bar -->
-    <div class="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
-
-      <p class="text-sm font-bold leading-7 text-gray-300 sm:text-base">
-        © <span id="footerYear"></span>
-        <span class="font-black text-white">AS UNITED CRICKET TEAM.</span>
-        All Rights Reserved.
-      </p>
-
-      <a href="#" class="text-sm font-extrabold text-gray-300 transition duration-300 hover:text-yellow-400 sm:text-base">
-        Made with <span class="text-lg text-yellow-400">♥</span> for Cricket
-      </a>
-
-    </div>
-
-  </div>
-</footer>
-<!-- ================= END PREMIUM FOOTER ================= -->
-
-<!-- ================= END FOOTER ================= -->
+    <!-- ================= END FOOTER ================= -->
 
     <!-- JavaScript File -->
+   
+    <script type="module" src="./src/firebase.js"></script>
+    <script type="module" src="./src/firebase-finance.js"></script>
     <script src="./src/script.js" defer></script>
   </body>
 </html>
